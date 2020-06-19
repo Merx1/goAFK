@@ -4,10 +4,10 @@
 #include <csgocolors>
 #pragma newdecls required
 
-#define CHECK_INTERVAL         5.0
+#define CHECK_INTERVAL         1.0
 #define CHECK_ADMIN(%1) (adminFlag == 0 ? GetUserFlagBits(%1)!=0 : (GetUserFlagBits(%1) & adminFlag || GetUserFlagBits(%1) & ADMFLAG_ROOT))
 
-#define PREFIX    "\x01[\x10GoAFK\x01]"
+#define PREFIX    "\x01[\x10AFK\x01]"
 
 ConVar goAFK_enable;
 ConVar goAFK_mode;
@@ -313,7 +313,14 @@ public Action Timer_CheckPlayerAfkManagerCsgo(Handle timer, any data) {
                     timeleft = kickTime - afkTime[client];
                     if(timeleft > 0.0) {
                         if(timeleft <= iWarnTime)
-                            CPrintToChat(client, "%t", "Kick_Warning", RoundToFloor(timeleft));
+                            {
+								char txt[128];
+								int time = RoundToNearest(timeleft);
+								SetGlobalTransTarget(client);
+								FormatEx(txt, sizeof(txt), "%t", "Format_Kick_Warn", time);
+								SetHudTextParams(-1.0, -1.0, 1.0, 255, 0, 0, 255, 0, 1.0, 0.1, 0.1);
+								ShowHudText(client, -1, txt);
+							}
                     }
                     else {
                         char clientName[MAX_NAME_LENGTH+4];
@@ -329,7 +336,14 @@ public Action Timer_CheckPlayerAfkManagerCsgo(Handle timer, any data) {
                     timeleft = moveTime - afkTime[client];
                     if(timeleft > 0.0) {
                         if(timeleft <= iWarnTime)
-                            CPrintToChat(client, "%t", "Move_Warning", RoundToFloor(timeleft));
+                            {
+								char txt[128];
+								int time = RoundToNearest(timeleft);
+								SetGlobalTransTarget(client);
+								FormatEx(txt, sizeof(txt), "%t", "Format_Move_Warn", time);
+								SetHudTextParams(-1.0, -1.0, 1.0, 255, 0, 0, 255, 0, 1.0, 0.1, 0.1);
+								ShowHudText(client, -1, txt);
+							}
                     }
                     else {
                         char clientName[MAX_NAME_LENGTH+4];
