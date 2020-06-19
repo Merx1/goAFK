@@ -14,7 +14,7 @@
 		"#format"	"{1:i}"
 		"en"		"[{GREEN}goAFK{NORMAL}] Warning: If you do not move in {RED}{1}{NORMAL} seconds, you will be moved to spectate."
 		"pl"		"[{GREEN}goAFK{NORMAL}] Uwaga: Jeżeli nie poruszysz się w ciągu {RED}{1}{NORMAL} sekund(y), zostaniesz przeniesiony do obserwatorów."
-		"de"		"[{GREEN}goAFK{NORMAL}] Achtung: Wenn Sie sich nicht in {RED}{1}{NORMAL} Sekunde(n) bewegen, werden Sie zu den Beobachtern gebracht."
+		"de"		"[{GREEN}goAFK{NORMAL}] Achtung: Wenn Sie sich nicht in {RED}{1}{NORMAL} Sekunde(n) bewegen, werden Sie zu den Zuschauern gebracht."
 	}
 
 	"Kick_Warning"
@@ -30,7 +30,7 @@
 		"#format"	"{1:s}"
 		"en"		"[{GREEN}goAFK{NORMAL}] {PINK}{1}{NORMAL} was moved to spectate for being AFK too long."
 		"pl"		"[{GREEN}goAFK{NORMAL}] {PINK}{1}{NORMAL} został przeniesiony do obserwatorów, ponieważ za długo pozostawał bez ruchu."
-		"de"		"[{GREEN}goAFK{NORMAL}] {PINK}{1}{NORMAL} wurde zu Beobachtern gebracht, weil er zu lange bewegungslos blieb."
+		"de"		"[{GREEN}goAFK{NORMAL}] {PINK}{1}{NORMAL} wurde zu Zuschauern gebracht, weil er zu lange bewegungslos blieb."
 	}
 
 	"Kick_Announce"
@@ -61,6 +61,6 @@
 		"#format"	"{1:i}"
 		"en"		"[AFK] You will be moved to spectators in: {1}"
 		"pl"		"[AFK] Zostaniesz przeniesiony do obserwujących za: {1}"
-		"de"		"[AFK] Sie werden in: {1} zu den Beobachtern gebracht"
+		"de"		"[AFK] Sie werden in: {1} zu den Zuschauern gebracht"
 	}
 }
