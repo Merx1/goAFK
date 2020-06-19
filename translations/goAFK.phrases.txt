@@ -1,4 +1,4 @@
-﻿//*************************************************************************************************************
+//*************************************************************************************************************
 
 // {NORMAL}, {DARKRED}, {PINK}, {YELLOW}, {GREEN}, {LIGHTGREEN}, {RED}, {GRAY}, {BLUE}, {DARKBLUE}, {PURPLE} 
 
@@ -42,5 +42,18 @@
 		"en"		"You were kicked for being AFK too long."
 		"pl"		"Zostałeś wykopany ponieważ za długo pozostawałeś bez ruchu."
 	}
-}
 
+	"Format_Kick_Warn"
+	{
+		"#format"	"{1:i}"
+		"en"		"[AFK] You will be kicked in: {1}"
+		"pl"		"[AFK] Zostaniesz wykopany za: {1}"
+	}
+
+	"Format_Move_Warn"
+	{
+		"#format"	"{1:i}"
+		"en"		"[AFK] You will be moved to spectators in: {1}"
+		"pl"		"[AFK] Zostaniesz przeniesiony do obserwujących za: {1}"
+	}
+}
